@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Puppy Profile</title>
+</head>
+<body>
+    <section role="region" class="profile-container">
+        <h1>Puppy Profile</h1>
+        <section class="profile flex-container row">
+            <div class="profile-img-section flex-container column condensed">
+                <img src="./images/puppy-cropped.jpg" alt="A black and white fluffy husky puppy">
+                <a href="#" id="edit">Edit</a>
+            </div>
+            <form class="profile-info flex-container column">
+                <label class="wrapper-label form-block">
+                    Name:
+                    <input class="" type="text" id="name" name="name" placeholder="Name">
+                </label>
+                <div class="date-picker flex-container column form-block">
+                    <p class="p-label date">Date of Birth:</p>
+                    <div class="date-dds flex-container row">
+                        <label for="" class="sr-only">Month</label>
+                        <div class="custom-select">
+                            <i class="fa fa-angle-down"></i>
+                            <select type="text" id="month" name="month">
+                                <option value="">Month</option>
+                            </select>
+                        </div>
+                        
+                        <label for="day" class="sr-only">Date</label>
+                        <div class="custom-select">
+                            <i class="fa fa-angle-down"></i>
+                            <select type="text" id="day" name="day">
+                                <option value="">Date</option>
+                            </select>
+                        </div>
+    
+                        <label for="year" class="sr-only">Year</label>
+                        <div class="custom-select">
+                            <i class="fa fa-angle-down"></i>
+                            <select type="text" id="year" name="year">
+                                <option value="">Year</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="static-date"><span id="staticMonth"></span>/<span id="staticDay"></span>/<span id="staticYear"></span></div>
+                </div>
+                <div class="gender-section flex-container row condensed form-block">
+                    <p class="p-label gender">Gender:</p>
+                    <label>
+                        <input class="gender-check" type="checkbox" id="female" name="checkbox" value="female">
+                        <span class="checkmark"></span>
+                        Female
+                    </label>
+                    <label>
+                        <input class="gender-check" type="checkbox" id="male" name="checkbox" value="male">
+                        <span class="checkmark"></span>
+                        Male
+                    </label>
+
+                </div>
+                <label class="wrapper-label form-block">
+                    Misc Notes:
+                    <textarea type="text" id="notes" name="notes" placeholder="Add additional notes here"></textarea>
+                </label>
+                <div class="button-container flex-container row condensed form-block">
+                    <button class="form-button sub" id="cancel">Cancel</button>
+                    <button class="form-button main" id="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+</html>
